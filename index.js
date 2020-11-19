@@ -5,9 +5,9 @@ const app = express();
 app.use('/assets', express.static(process.cwd() + '/assets'));
 app.set('view engine', 'ejs');
 
-app.get('/', function(req, res) {
-    res.render('index')
-});
+// app.get('/', function(req, res) {
+//     res.render('index')
+// });
 
 app.get('/blog', function(req, res) {
     res.render('blog')
@@ -17,29 +17,23 @@ app.get('/detail', function(req, res) {
     res.render('detail')
 });
 
-app.get('/contact', function(req, res) {
+app.get('/c', function(req, res) {
     res.render('contact')
 });
 
-// const NewsAPI = require('newsapi');
-// const newsapi = new NewsAPI('0ec403fe82154bebb082fb82b6d436ce');
-// // To query /v2/top-headlines
-// // All options passed to topHeadlines are optional, but you need to include at least one of them
-// newsapi.v2.topHeadlines({
-//   sources: 'bbc-news,the-verge',
-//   q: 'bitcoin',
-//   category: 'business',
-//   language: 'en',
-//   country: 'us'
-// }).then(response => {
-//   console.log(response);
-//   /*
-//     {
-//       status: "ok",
-//       articles: [...]
-//     }
-//   */
-// });
+const NewsAPI = require('newsapi');
+const newsapi = new NewsAPI('0ec403fe82154bebb082fb82b6d436ce');
+// To query /v2/top-headlines
+// All options passed to topHeadlines are optional, but you need to include at least one of them
+newsapi.v2.topHeadlines({
+  country: 'ng'
+}).then(response => {
+  console.log(response.articles[4]);
+    app.get('/', function(req, res) {
+        res.render('index', {'news': response});
+    });
+})
+.catch(error => { console.log(error)})
 // // To query /v2/everything
 // // You must include at least one q, source, or domain
 // newsapi.v2.everything({
@@ -60,21 +54,7 @@ app.get('/contact', function(req, res) {
 //     }
 //   */
 // });
-// // To query sources
-// // All options are optional
-// newsapi.v2.sources({
-//   category: 'technology',
-//   language: 'en',
-//   country: 'ng'
-// }).then(response => {
-//   console.log(response);
-//   /*
-//     {
-//       status: "ok",
-//       sources: [...]
-//     }
-//   */
-// });
+
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}!`)

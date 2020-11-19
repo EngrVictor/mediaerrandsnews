@@ -199,43 +199,43 @@
 	<div class="center_2 clearfix">
 	  <div class="col-sm-6 space_all">
 	   <div class="center_2_left clearfix">
-	      <div class="ih-item square colored effect8 scale_down"><a href="#">
-                      <div class="img"><img src="assets/img/6.jpg" alt="img"></div>
-                      <div class="info">
-                        <h3>News is here</h3>
-                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitursodales ligula in libero.Sed dignissim lacinia nunc.</p>
-                      </div></a></div>
-	   </div>
+		<div class="ih-item square colored effect8 scale_down"><a href="<%= news.articles[0].url %>">
+			<div class="img"><img src="<%= news.articles[0].urlToImage %>" alt="img"></div>
+			<div class="info">
+			  <h3><%= news.articles[0].title %></h3>
+			  <p> <%= news.articles[0].description %></p>
+			</div></a></div>
+		</div>
 	  </div>
 	  <div class="col-sm-6 space_all">
 	   <div class="center_2_right">
-	    <div class="ih-item square colored effect8 scale_down"><a href="#">
-                      <div class="img"><img src="assets/img/7.jpg" alt="img"></div>
+	    <div class="ih-item square colored effect8 scale_down"><a href="<%= news.articles[1].url %>">
+                      <div class="img"><img src="<%= news.articles[1].urlToImage %>" alt="img"></div>
                       <div class="info">
-                        <h3>News is here</h3>
-                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitursodales ligula in libero.Sed dignissim lacinia nunc.</p>
+                        <h3><%= news.articles[1].title %></h3>
+                        <p> <%= news.articles[1].description %></p>
                       </div></a></div>
 	   </div>
 	   <div class="center_2_right_1 clearfix">
 	    <div class="col-sm-6 space_all">
 		 <div class="center_2_right_1_inner border_center_1">
-		  <div class="ih-item square colored effect8 scale_down"><a href="#">
-                      <div class="img"><img src="assets/img/8.jpg" alt="img"></div>
-                      <div class="info">
-                        <h3>News is here</h3>
-                        <p>  Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitursodales ligula in libero.Sed dignissim lacinia nunc.</p>
-                      </div></a></div>
-		 </div>
+			<div class="ih-item square colored effect8 scale_down"><a href="<%= news.articles[5].url %>">
+				<div class="img"><img src="<%= news.articles[5].urlToImage %>" alt="img"></div>
+				<div class="info">
+				  <h3><%= news.articles[5].title %></h3>
+				  <p> <%= news.articles[5].description %></p>
+				</div></a></div>
+ 			</div>
 		</div>
 		<div class="col-sm-6 space_all">
 		 <div class="center_2_right_1_inner">
-		  <div class="ih-item square colored effect8 scale_down"><a href="#">
-                      <div class="img"><img src="assets/img/9.jpg" alt="img"></div>
-                      <div class="info">
-                        <h3>News is here</h3>
-                        <p>  Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitursodales ligula in libero.Sed dignissim lacinia nunc.</p>
-                      </div></a></div>
-		 </div>
+			<div class="ih-item square colored effect8 scale_down"><a href="<%= news.articles[3].url %>">
+				<div class="img"><img src="<%= news.articles[3].urlToImage %>" alt="img"></div>
+				<div class="info">
+				  <h3><%= news.articles[3].title %></h3>
+				  <p> <%= news.articles[3].description %></p>
+				</div></a></div>
+ 			</div>
 		</div>
 	   </div>
 	  </div>
@@ -270,62 +270,62 @@
 				  <div class="tab_inner clearfix">
 					 <div class="col-sm-6 space_left">
 					  <div class="tab_inner_left">
-					   <a href="#"><img src="assets/img/10.jpg" width="100%"></a>
-					   <h4><a href="#">Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit</a></h4>
-					   <h6><span>Nulla Quis </span> -  Jan 16, 2016</h6>
-					   <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitursodales ligula in libero. Sed dignissim lacinia nunc...</p>
+					   <a href="#"><img src="<%= news.articles[6].urlToImage %>" width="100%"></a>
+					   <h4><a href="#"><%= news.articles[6].title %></a></h4>
+					   <h6><span>Date </span> -  <%= news.articles[6].publishedAt %></h6>
+					   <p><%= news.articles[6].description %></p>
 					  </div>
 					 </div>
 					 <div class="col-sm-6">
 					  <div class="tab_inner_right clearfix">
 					   <div class="col-sm-4">
 						<div class="tab_inner_right_1">
-						 <a href="#"><img src="assets/img/11.jpg" width="100%" height="70px"></a>
+						 <a href="#"><img src="<%= news.articles[7].urlToImage %>" width="100%" height="70px"></a>
 						</div>
 					   </div>
 					   <div class="col-sm-8 space_left">
 						<div class="tab_inner_right_2">
-						 <p><a href="#"> Nulla Quis Sem Nibh Elementum Imperdiet</a></p>
-						 <h6>Jan 16, 2016</h6>
+						 <p><a href="#"> <%= news.articles[7].title %></a></p>
+						 <h6><%= news.articles[7].publishedAt %></h6>
 						</div>
 					   </div>
 					  </div>
 					  <div class="tab_inner_right clearfix">
 					   <div class="col-sm-4">
 						<div class="tab_inner_right_1">
-						 <a href="#"><img src="assets/img/12.jpg" width="100%" height="70px"></a>
+						 <a href="#"><img src="<%= news.articles[8].urlToImage %>" width="100%" height="70px"></a>
 						</div>
 					   </div>
 					   <div class="col-sm-8 space_left">
 						<div class="tab_inner_right_2">
-						 <p><a href="#">Consectetur  Elit Integer Nec Odio Praesent Libero</a></p>
-						 <h6>Jan 16, 2016</h6>
+						 <p><a href="#"><%= news.articles[8].title %></a></p>
+						 <h6><%= news.articles[8].publishedAt %></h6>
 						</div>
 					   </div>
 					  </div>
 					  <div class="tab_inner_right clearfix">
 					   <div class="col-sm-4">
 						<div class="tab_inner_right_1">
-						 <a href="#"><img src="assets/img/13.jpg" width="100%" height="70px"></a>
+						 <a href="#"><img src="<%= news.articles[10].urlToImage %>" width="100%" height="70px"></a>
 						</div>
 					   </div>
 					   <div class="col-sm-8 space_left">
 						<div class="tab_inner_right_2">
-						 <p><a href="#">Praesent Libero Sed Cursus Ante Dapibus Diam</a></p>
-						 <h6>Jan 16, 2016</h6>
+						 <p><a href="#"><%= news.articles[10].title %></a></p>
+						 <h6><%= news.articles[10].publishedAt %></h6>
 						</div>
 					   </div>
 					  </div>
 					  <div class="tab_inner_right clearfix">
 					   <div class="col-sm-4">
 						<div class="tab_inner_right_1">
-						 <a href="#"><img src="assets/img/14.jpg" width="100%" height="70px"></a>
+						 <a href="#"><img src="<%= news.articles[9].urlToImage %>" width="100%" height="70px"></a>
 						</div>
 					   </div>
 					   <div class="col-sm-8 space_left">
 						<div class="tab_inner_right_2">
-						 <p><a href="#">Fusce Nec Tellus Sed Augue Semper Porta Massa</a></p>
-						 <h6>Jan 16, 2016</h6>
+						 <p><a href="#"><%= news.articles[9].title %></a></p>
+						 <h6><%= news.articles[9].publishedAt %></h6>
 						</div>
 					   </div>
 					  </div>
@@ -2309,6 +2309,11 @@ $('#toTop').click(function(){
 	return false;
 });
 });
+
+console.log( <%= news.articles[0].description %> );
+console.log( <%= news.articles[0].title %> );
+console.log( <%= news.articles[0].content%> );
+
 
 </script>
 
